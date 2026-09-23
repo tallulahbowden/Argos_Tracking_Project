@@ -8,3 +8,11 @@
 # Author: Tallulah Bowden (tsb66@duke.edu)
 # Date:   September 22, 2026
 #--------------------------------------------------------------
+
+# Create the geographic selection box
+the_box = {
+    "x_min" : 34.00,
+    "y_min" : -76.00,
+    "x_max" : 34.50,
+    "y_max" : -75.00
+}
