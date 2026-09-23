@@ -16,3 +16,20 @@ the_box = {
     "x_max" : 34.50,
     "y_max" : -75.00
 }
+
+# Copy and paste a line of data as the lineString variable value
+lineString = '10154641239,true,2019-05-14 16:05:36.000,-75.52452,34.68404,,0.0,-121.0,4.0167962144E8,3481.0,217,"46",34.68404,34.68404,"0",-75.52452,-75.52452,10,0,3,51.0,602.0,3818.0,3173.0,4,4,0,1,"1",,,"argos-doppler-shift","Pterodroma hasitata","174441","HA09","Satellite tracking of black-capped petrels, 2019"'
+
+# Use the split command to parse the items in lineString into a list object
+line_data = lineString.split(",")
+
+# Assign variables to specific items in the list
+event_id = line_data[0] # Argos tracking event ID ("event-id")
+timestamp = line_data[2] # Observation date ("timestamp")
+lat = line_data[4] # Observation latitude ("location-lat")
+lon = line_data[3] # Observation longitude ("location-lon")
+lc = line_data[14] # Observation location class ("argos:lc")
+tag_id = line_data[33] # Tag identified ("tag-local-identifier")
+
+# Print information to the use
+print(f"Record {event_id} indicates {tag_id} was seen at {lat}N and {lon}W on {timestamp}")
